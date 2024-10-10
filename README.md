@@ -15,7 +15,7 @@ This has been tested with Oqtane 5.2.1 - 5.2.3 and Bold Reports 6.2.38 as of 10/
 There is a simple API that allow the BoldReports Designer to load and save reports from server via the menu in Designer.
 
 Known issues:
- The bold reports designer is not rendering on first load of the page.   Refreshing or shift-refreshing will usally cause it to load.
+ The bold reports designer is not rendering on first load of the page.   Refreshing or shift-refreshing will usually cause it to load.
  Report preview is not working and generates errors.
 
  I have a ticket open with BoldReports support and they are looking at these issues.
