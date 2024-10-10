@@ -1,0 +1,7 @@
+cp -f "../Client/bin/Debug/net8.0/SPSITECH.Module.BoldReports.Client.Oqtane.dll" "../../oqtane.framework/Oqtane.Server/bin/Debug/net8.0/"
+cp -f "../Client/bin/Debug/net8.0/SPSITECH.Module.BoldReports.Client.Oqtane.pdb" "../../oqtane.framework/Oqtane.Server/bin/Debug/net8.0/"
+cp -f "../Server/bin/Debug/net8.0/SPSITECH.Module.BoldReports.Server.Oqtane.dll" "../../oqtane.framework/Oqtane.Server/bin/Debug/net8.0/"
+cp -f "../Server/bin/Debug/net8.0/SPSITECH.Module.BoldReports.Server.Oqtane.pdb" "../../oqtane.framework/Oqtane.Server/bin/Debug/net8.0/"
+cp -f "../Shared/bin/Debug/net8.0/SPSITECH.Module.BoldReports.Shared.Oqtane.dll" "../../oqtane.framework/Oqtane.Server/bin/Debug/net8.0/"
+cp -f "../Shared/bin/Debug/net8.0/SPSITECH.Module.BoldReports.Shared.Oqtane.pdb" "../../oqtane.framework/Oqtane.Server/bin/Debug/net8.0/"
+cp -rf "../Server/wwwroot/"* "../../oqtane.framework/Oqtane.Server/wwwroot/"

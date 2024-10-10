@@ -1,0 +1,45 @@
+@using SPSITECH.Module.BoldReports.Client.Services
+@using Microsoft.JSInterop
+@using Oqtane.Repository
+
+@namespace SPSITECH.Module.BoldReports
+@inherits ModuleBase
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JSRuntime
+@inject ITenantRepository TenantRepository
+
+<div id="designer" style="width: 100%;height: 950px"></div>
+
+@code {
+    public override string Title => "Report Designer";
+  
+    private string _returnUrl;
+    private Tenant tenant;
+
+    // ReportDesigner options
+    BoldReportDesignerOptions designerOptions = new BoldReportDesignerOptions();
+
+    // Used to render the Bold Report Designer component in Blazor page.
+    public async void RenderReportDesigner()
+    {
+        designerOptions.ServiceURL = "/api/ReportingAPI";
+        await JSRuntime.InvokeVoidAsync("SPSITECH.BoldReports.RenderDesigner", "designer", designerOptions);
+    }
+    // Initial rendering of Bold Report Designer
+    protected override void OnAfterRender(bool firstRender)
+    {
+        RenderReportDesigner();
+    }
+
+    protected override void OnInitialized()
+    {
+      
+        tenant = TenantRepository.GetTenant(PageState.Site.TenantId);
+
+        if (PageState.QueryString.ContainsKey("returnurl"))
+            _returnUrl = PageState.ReturnUrl;
+       
+    }
+
+
+}
